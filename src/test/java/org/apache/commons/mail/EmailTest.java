@@ -126,4 +126,11 @@ public class EmailTest {
 		email.getSentDate();
 		assertNotNull(email.sentDate);
 	}
+	
+	//test getSocetConnectionTimeout()
+	@Test
+	public void testGetSocetConnectionTimeout() throws Exception{
+		email.getSocketConnectionTimeout();
+		assertNotNull(email.socketConnectionTimeout);
+	}
 }
