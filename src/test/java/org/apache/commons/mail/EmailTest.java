@@ -91,4 +91,17 @@ public class EmailTest {
 		email.buildMimeMessage();
 		
 	}
+	
+	//test a proper getHostName() call
+	@Test
+	public void testGetHostName() throws Exception{
+		email.setHostName(TEST_NAME);
+		email.getHostName();
+	}
+	
+	//test getHostName() without the host name being set first
+	@Test
+	public void testGetHostName2() throws Exception{
+		email.getHostName();
+	}
 }
