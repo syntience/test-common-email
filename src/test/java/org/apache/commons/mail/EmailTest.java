@@ -133,4 +133,11 @@ public class EmailTest {
 		email.getSocketConnectionTimeout();
 		assertNotNull(email.socketConnectionTimeout);
 	}
+	
+	//test setFrom with test email
+	@Test
+	public void testSetFrom() throws Exception{
+		email.setFrom(TEST_EMAIL);
+		assertNotNull(email.fromAddress);
+	}
 }
