@@ -27,4 +27,13 @@ public class EmailTest {
 	public void tearDownEmaiLtest() throws Exception{
 		
 	}
+
+	//test addBcc() with both a list of emails and an empty list
+	@Test
+	public void testAddBcc() throws Exception{
+		email.addBcc(TEST_EMAILS);
+		assertEquals(3, email.getBccAddresses().size());
+		email.addBcc(TEST_EMPTY);
+		assertEquals(0, email.getBccAddresses().size());
+	}
 }
