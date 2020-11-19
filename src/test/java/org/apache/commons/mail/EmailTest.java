@@ -43,4 +43,26 @@ public class EmailTest {
 		email.addCc(TEST_EMAIL);
 		assertEquals(1, email.getCcAddresses().size());
 	}
+	
+	//test addHeader() with an empty name
+	@Test
+	public void testAddHeader() throws Exception{
+		email.addHeader("", TEST_VALUE);
+		assertEquals(0, email.headers.size());
+		
+	}
+	
+	//test addHeader() with an empty value
+	@Test
+	public void testAddHeader2() throws Exception{
+		email.addHeader(TEST_NAME, "");
+		assertEquals(0, email.headers.size());
+	}
+	
+	//test addHeader() with both name and value
+	@Test
+	public void testAddHeader3() throws Exception{
+		email.addHeader(TEST_NAME, TEST_VALUE);
+		assertEquals(1, email.headers.size());
+	}
 }
