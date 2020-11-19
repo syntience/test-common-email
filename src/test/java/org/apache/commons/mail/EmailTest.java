@@ -104,4 +104,11 @@ public class EmailTest {
 	public void testGetHostName2() throws Exception{
 		email.getHostName();
 	}
+	
+	//test getMailSession()
+	@Test
+	public void testGetMailSession() throws Exception{
+		email.getMailSession();
+		assertNotNull(email.getMailSession());
+	}
 }
