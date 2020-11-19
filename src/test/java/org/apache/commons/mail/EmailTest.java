@@ -111,4 +111,19 @@ public class EmailTest {
 		email.getMailSession();
 		assertNotNull(email.getMailSession());
 	}
+	
+	//test getSentDate() without setting date
+	@Test
+	public void testGetSentDate() throws Exception{
+		email.getSentDate();
+		assertNotNull(email.sentDate);
+	}
+	
+	//test getSentDate() after setting the sent date
+	@Test
+	public void testGetSentDate2() throws Exception{
+		email.setSentDate(new Date());
+		email.getSentDate();
+		assertNotNull(email.sentDate);
+	}
 }
