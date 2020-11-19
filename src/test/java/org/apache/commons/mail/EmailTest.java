@@ -65,4 +65,11 @@ public class EmailTest {
 		email.addHeader(TEST_NAME, TEST_VALUE);
 		assertEquals(1, email.headers.size());
 	}
+	
+	//test addReplyTo() with an email and name
+	@Test
+	public void testAddReplyTo() throws Exception{
+		email.addReplyTo(TEST_EMAIL, TEST_NAME);
+		assertEquals(1, email.replyList.size());
+	}
 }
