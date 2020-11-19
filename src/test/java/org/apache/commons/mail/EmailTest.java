@@ -72,4 +72,23 @@ public class EmailTest {
 		email.addReplyTo(TEST_EMAIL, TEST_NAME);
 		assertEquals(1, email.replyList.size());
 	}
+	
+	//test one call of buildMimeMessage()
+	@Test
+	public void testBuildMimeMessage() throws Exception{
+		email.setHostName(TEST_NAME);
+		email.setFrom(TEST_EMAIL);
+		email.setCharset("US-ASCII");
+		
+		email.buildMimeMessage();
+		
+	}
+
+	//test two calls of buildMimeMessage()
+	@Test
+	public void testBuildMimeMessage2() throws Exception{
+		email.buildMimeMessage();
+		email.buildMimeMessage();
+		
+	}
 }
